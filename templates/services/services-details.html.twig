@@ -1,0 +1,84 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    Servive|details
+{% endblock %}
+
+{% block body %}
+    {{ include('partials/header.html.twig') }}
+
+    <div class="page-title-area item-bg3">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2>Detail Service</h2>
+                        <ul>
+                            <li><a href="{{ path('home') }}">Accueil</a></li>
+                            <li>Detail Service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="services-details-area ptb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="services-details-image">
+                            <img src="{{ vich_uploader_asset(service, 'imageFile1') }}" alt="{{service.image}}" style= "width: 640px; height: 480px;">
+                        </div>
+                        <div class="services-details-desc">
+                            <h3>{{ service.titre }}</h3>
+                            <p>{{ service.description |raw }}</p>
+                        
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <aside class="widget-area" id="secondary">
+                            <section class="widget widget_services_list">
+                                
+                                <h3 class="widget-title">Services</h3>
+                                <ul>
+                                    {% for service in services %}
+                                    <li>
+                                        <a href="{{ path('services_details', {id: service.id, slug: service.slug}) }}">
+                                            {{service.titre}}
+                                            <i class="las la-arrow-right"></i>
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                
+                            </section>
+                            <section class="widget widget_download_list">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="las la-file-alt"></i>
+                                            Download Pdf File
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="las la-book"></i>
+                                            Download DOC
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                            
+                        </aside>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    {{ include('partials/footer.html.twig') }}
+{% endblock %}
+

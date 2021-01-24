@@ -1,0 +1,35 @@
+<section class="services-area bg-ffffff pt-100 pb-70">
+      <div class="container">
+        <div class="section-title">
+          <span>Services</span>
+          <h2>Un service de qualité est notre garantie</h2>
+        </div>
+        <div class="row">
+       
+  
+        {% for service in services %} 
+            <div class="col-lg-4 col-md-6">
+              <div class="single-services">
+                <div class="image" >
+                  <a href="services-details.html">
+                      <img src=" {{ vich_uploader_asset(service, 'imageFile1')}} "  alt="{{service.image}}" style= "width: 100%; height: 266px; object-fit: cover;"/>
+                  </a>
+                  <div class="icon">
+                    <i class="flaticon-apartment"></i>
+                  </div>
+                </div>
+                <div class="content">
+                  <h3>
+                    <a href="services-details.html">Installations electriques</a>
+                  </h3>
+                  <p>
+                    {{service.description|raw}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endfor %} 
+      
+        </div>
+      </div>
+    </section>

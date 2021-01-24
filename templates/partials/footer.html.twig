@@ -1,0 +1,114 @@
+<div class="footer-area pb-70">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-footer-widget">
+              <div class="logo">
+                <h2>
+                  <a href="index.html">ISS-SARL</a>
+                </h2>
+              </div>
+              <p>
+                Industials Solutions and Service est une entreprise possedant
+                des ingenieurs et des techniciens qualifiés aptent a relever le defis.
+              </p>
+              <ul class="social">
+                <li>
+                  <a href="#" class="facebook" target="_blank">
+                    <i class="lab la-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="twitter" target="_blank">
+                    <i class="lab la-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="pinterest" target="_blank">
+                    <i class="lab la-pinterest-p"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="linkedin" target="_blank">
+                    <i class="lab la-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <div class="single-footer-widget pl-5">
+              <h3>Services</h3>
+              {% for service in services %}
+                <ul class="quick-links">
+                  <li>
+                    <i class="las la-angle-double-right"></i>
+                    <a href="{{ path('services', {id: service.id, slug: service.slug} )}}">{{service.titre}}</a>
+                  </li>
+                </ul>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="single-footer-widget pl-5">
+              <h3>Lien</h3>
+              <ul class="quick-links">
+                <li>
+                  <i class="las la-angle-double-right"></i>
+                  <a href="{{ path('services') }}">Services</a>
+                </li>
+                <li>
+                  <i class="las la-angle-double-right"></i>
+                  <a href="{{ path('projets') }}">Projets</a>
+                </li>
+                <li>
+                  <i class="las la-angle-double-right"></i>
+                  <a href="{{ path('blog') }}">BLog</a>
+                </li>
+                <li>
+                  <i class="las la-angle-double-right"></i>
+                  <a href="{{ path('contact') }}">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <div class="single-footer-widget">
+              <h3>Information</h3>
+              <ul class="footer-contact-info">
+                <li>
+                  <i class="las la-phone"></i>
+                  <span>Phone</span>
+                  <a href="tel:+237 670889286">+237 670889286</a><br>
+                  <a href="tel:+237 695456222">+237 695456222</a>
+                </li>
+                <li>
+                  <i class="las la-envelope"></i>
+                  <span>Email</span>
+                  <a href="mailto:isssarl@outlook.com">isssarl@outlook.com</a>
+                </li>
+
+                <li>
+                  <i class="las la-map-marker-alt"></i>
+                  <span>Addresse</span>
+                  <a href="#">Akwa, rue BERNABE.</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright-area">
+      <div class="container">
+        <p>
+          Copyright @2021 ISS-SARL. Proudly by 
+          <a href="https://www.linkedin.com/in/JuniorMbogning/" target="_blank"> JuniorMbogning </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="go-top">
+      <i class="las la-long-arrow-alt-up"></i>
+    </div>

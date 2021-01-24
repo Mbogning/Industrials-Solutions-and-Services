@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}services{% endblock %}
+
+{% block body %}
+   {{ include('partials/header.html.twig') }}
+    <div class="page-title-area item-bg2">
+      <div class="d-table">
+        <div class="d-table-cell">
+          <div class="container">
+            <div class="page-title-content">
+              <h2>Services</h2>
+              <ul>
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>Services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="services-area bg-666666 pt-100 pb-70">
+      <div class="container">
+        <div class="section-title">
+          <span>Nos Services</span>
+          <h2>Un service de qualité est notre garantie</h2>
+        </div>
+        
+            
+            <div class="row">
+              {% for service in services %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services-item">
+                    <div class="icon">
+                        <i class="flaticon-apartment"></i>
+                    </div>
+                    <h3>
+                        <a href="">{{ service.titre}}</a>
+                    </h3>
+                    
+                    <a href="{{ path('services_details', {id: service.id, slug: service.slug}) }}" class="learn-btn">
+                        Voir plus
+                        <i class="las la-arrow-right"></i>
+                    </a>
+                    </div>
+              </div>
+            
+        {% endfor %}
+    </section>
+        {{ include('partials/footer.html.twig') }}
+    
+
+{% endblock %}

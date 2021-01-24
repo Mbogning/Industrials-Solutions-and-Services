@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Projets
+{% endblock %}
+
+{% block body %}
+
+    {% include "partials/header.html.twig" %}
+
+    <div class="page-title-area item-bg4">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2>Projet</h2>
+                        <ul>
+                            <li>
+                                <a href="{{ path('home') }}">Home</a>
+                            </li>
+                            <li>Projet réalisé</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="blog-area pt-100 pb-70">
+      <div class="container">
+        <div class="section-title">
+          <span>Projets</span>
+          <h2>Nos projets réalisés</h2>
+        </div>
+        <div class="row">
+            {% for projet in projets %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-item bg-ffffff">
+                        <div class="image">
+                            <a href="{{ path('projets_details', {id: projet.id, slug: projet.slug}) }}">
+                            <img src="{{ vich_uploader_asset(projet, 'imageFile') }}" alt="{{projet.image}}" style="width: 510px; height: 400px;"/>
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <a href="">
+                                   {{projet.titre}}
+                                </a>
+                            </h3>
+                            <a href="{{ path('projets_details', {id: projet.id, slug: projet.slug}) }}" class="blog-btn">Voir +</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+      </div>
+    </section>
+
+    {% include "partials/footer.html.twig" %}
+    
+{% endblock %}

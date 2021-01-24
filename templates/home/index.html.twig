@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+        {{ include ('partials/header.html.twig') }}
+
+
+        <div class="main-banner">
+            <div class="main-banner-item" >
+                {#<img background-image src="{{ asset('frontend/img/choix.jpg') }}"  style="position: relative; z-index: 1; background-position: center center; background-size: cover; background-repeat: no-repeat; height: 800px; background-attachment: fixed;">#}
+                <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                    <div class="main-banner-content">
+                        <h1>Efficacité  et fournisseur de services digne de confiance</h1>
+                        <p>
+                        INDUSTRIALS SOLUTIONS AND SERVICES, Here2Maint.
+                        </p>
+                        <div class="banner-btn">
+                        <a href="{{ path('contact') }}" class="default-btn">
+                            Demander un service
+                        </a>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="features-area">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-item">
+                    <div class="icon">
+                        <i class="flaticon-settings-1"></i>
+                        <div class="shape">
+                        <img src="{{ asset('frontend/img/features-shape.png') }}" alt="image" />
+                        </div>
+                    </div>
+                    <p>
+                        Nous disposons des ingenieurs et des techniciens aptent
+                        a realiser vos projets de grandeur ou de petite envergure.
+                    </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-item">
+                    <div class="icon">
+                        <i class="flaticon-plumber-man"></i>
+                        <div class="shape">
+                        <img src="{{ asset('frontend/img/features-shape.png') }}" alt="image" />
+                        </div>
+                    </div>
+                    <p>
+                        Nous disposons de 2ans(deux annees) d'experiences 
+                        la conception et la realisation des projets .
+                    </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features-item">
+                    <div class="icon">
+                        <i class="flaticon-tools"></i>
+                        <div class="shape">
+                        <img src="{{ asset('frontend/img/features-shape.png') }}" alt="image" />
+                        </div>
+                    </div>
+                    <p>
+                        Nous disposons des equipement de moderne afin de faire 
+                        un travail impecable.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+
+
+      
+        {% include 'partials/_about.html.twig' %}
+        {% include 'partials/_service.html.twig' %}
+
+        {#{% include ('partials/_project.html.twig'%} #}
+
+        <section class="reasons-area pt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="reasons-image">
+                            <img src="{{ asset('frontend/img/choix.jpg')}}" >
+                           
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="reasons-item">
+                        <div class="text">
+                            <span>Pourquoi nous choisir</span>
+                            <h3>Raisons de nous choisir</h3>
+                        </div>
+                        <div class="reasons-content">
+                            <div class="icon">
+                            <i class="flaticon-plumber-man"></i>
+                            </div>
+                            <h4>Disponible 24H/24 & 7J/7</h4>
+                            <p>
+                            Nous travaillons 24H/24 & 7J/7 avec une equipe de releve pour
+                            fournir un travail meilleur
+                            </p>
+                        </div>
+                        <div class="reasons-content">
+                            <div class="icon">
+                            <i class="flaticon-settings"></i>
+                            </div>
+                            <h4>Réparer toutes sortes de défauts</h4>
+                            <p>
+                            Nous reparons toutes sortes de probleme que nous rencontrons
+                            quelques soit dans le batiment et la maintenance industrielles.
+                            </p>
+                        </div>
+                        <div class="reasons-content">
+                            <div class="icon">
+                            <i class="flaticon-settings-1"></i>
+                            </div>
+                            <h4>Un niveau de service plus élevé</h4>
+                            <p>
+                            Nous travaillons dur afin d'offrir a nos clients une satisfaction.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    {{ include ('partials/_faq.html.twig') }}
+
+    {{ include ('partials/_team.html.twig') }}
+
+    {{ include ('partials/_testimonial.html.twig') }}
+
+    {{ include ('partials/footer.html.twig') }}
+
+        
+
+
+
+{% endblock %}

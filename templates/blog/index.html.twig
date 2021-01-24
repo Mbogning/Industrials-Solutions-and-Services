@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% block body %}
+    {% include "partials/header.html.twig" %}
+    <div class="page-title-area">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2>Construction</h2>
+                        <ul>
+                            <li>
+                                <a href="{{ path('home') }}">Accueil</a>
+                            </li>
+                            <li>Construction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="error-area ptb-100">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="error-content">
+                        <h1>Page en construction</h1>
+                        <a href="{{ path('home') }}" class="default-btn">
+                            Aller à la page d'accueil
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include "partials/footer.html.twig" %}
+
+{% endblock %}

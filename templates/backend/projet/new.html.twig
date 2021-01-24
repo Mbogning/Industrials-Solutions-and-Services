@@ -1,0 +1,43 @@
+{% extends 'backend/adminTemplate.html.twig' %}
+{% block title %}
+
+ Projet | Ajout 
+{% endblock %}
+{% block header %}
+<div class="pageheader">
+    <h3>
+        <i class="fa fa-home"></i>Accueil
+    </h3>
+    <div class="breadcrumb-wrapper">
+        <span class="label">vous êtes ici:</span>
+        <ol class="breadcrumb">
+            <li>
+                <a href="#">
+                    Accueil
+                </a>
+            </li>
+            <li class="active">
+                Enregistrer un projet
+            </li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+<div id="page-content">
+   <div class="col-sm-6 eq-box-sm">
+   
+                                    <div class="panel-heading">
+                                        <div class="panel-control">
+                                            <a class="btn btn-info" href="{{ path('projet_index') }}" title="Retour à la liste"><i class="fa fa-chevron-left"></i></a>
+                                           
+                                        </div>
+                                    </div>
+                                    
+                                         {{ include('backend/projet/_form.html.twig') }}
+                                        
+
+{% endblock %}
+
+

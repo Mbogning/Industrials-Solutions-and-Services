@@ -1,0 +1,130 @@
+{% extends 'backend/adminTemplate.html.twig' %}
+
+{% block title %}
+     Accueil    
+{% endblock %}
+
+{% block hearder %}
+
+    <div class="pageheader">
+        <h3><i class="fa fa-home"></i> Accueil </h3>
+        <div class="breadcrumb-wrapper">
+            <span class="label">vous êtes ici:</span>
+            <ol class="breadcrumb">
+                <li class="active"> <a href="{{ path('dashboard') }}"> Accueil </a> </li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+            
+{% block body %}
+ <br>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
+            <!--Registered User-->
+            <div class="panel media pad-all">
+                <div class="media-left">
+                    <span class="icon-wrap icon-wrap-sm icon-circle bg-info">
+                   <a href="">
+                    <i class="fa fa-group fa-2x"></i>
+                    </span>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <p class="text-2x mar-no text-thin text-right"></p>
+                    <p class="h5 mar-no text-right">Utilisateurs</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
+            <!--Registered User-->
+            <div class="panel media pad-all">
+                <div class="media-left">
+                <a href="">
+                    <span class="icon-wrap icon-wrap-sm icon-circle bg-warning">
+                    <i class="glyphicon glyphicon-sound-stereo fa-2x"></i>
+                    </span>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <p class="text-2x mar-no text-thin text-right"></p>
+                    <p class="h5 mar-no text-right">Services</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
+            <!--Registered User-->
+            <div class="panel media pad-all">
+                <div class="media-left">
+                <a href="">
+                    <span class="icon-wrap icon-wrap-sm icon-circle bg-success">
+                    <i class=" glyphicon glyphicon-film fa-2x"></i>
+                    </span>
+                     </a>
+                </div>
+                <div class="media-body">
+                    <p class="text-2x mar-no text-thin text-right"></p>
+                    <p class="h5 mar-no text-right">Projets</p>
+                </div>
+            </div>
+        </div>
+         <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
+            <!--Registered User-->
+            <div class="panel media pad-all">
+                <div class="media-left">
+                <a href="">
+                    <span class="icon-wrap icon-wrap-sm icon-circle bg-danger">
+                    <i class="glyphicon glyphicon-film fa-2x"></i>
+                    </span>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <p class="text-2x mar-no text-thin text-right"></p>
+                    <p class="h5 mar-no text-right">Teams</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
+            <!--Registered User-->
+            <div class="panel media pad-all">
+                <div class="media-left">
+                
+                    <span class="icon-wrap icon-wrap-sm icon-circle bg-info">
+                    <a href="">
+                    <i class="glyphicon glyphicon-globe fa-2x"></i> </a>
+                    </span>
+
+                </div>
+               
+                <div class="media-body">
+                    <p class="text-2x mar-no text-thin text-right"></p>
+                    <p class="h5 mar-no text-right">Actualités</p>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xm-12">
+            <!--Registered User-->
+            <div class="panel media pad-all">
+                <div class="media-left">
+                <a href="">
+                    <span class="icon-wrap icon-wrap-sm icon-circle bg-warning">
+                    <i class="fa fa-book fa-2x"></i>
+                    </span>
+                     </a>
+                </div>
+                <div class="media-body">
+                    <p class="text-2x mar-no text-thin text-right"></p>
+                    <p class="h5 mar-no text-right">Album</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
